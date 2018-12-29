@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+/* Global Containers and layouts */
+.container {
+    height: 20vh;
+    padding-bottom: 0;
+}
+
+/* Landing page section
+   components =
+    [div .greeting-container],
+    [div .container],
+    [button #loginBtn],
+    [p #username]
+*/
+.greeting-container {
+  height: 100vh;
+  width: 100%;
+  background-color:#777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginBtn {
+  background-color: green;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+#loginBtn:hover {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+
+}
+
+#username {
+  padding-right: 10px;
+  font-size: 40px;
+}
+
+
+/* Dashboard section colors */
+#firstDash {background-color: burlywood;}
+#secondDash {background-color: purple;}
+#thirdDash {background-color: green;}
+#forthDash {background-color: aqua;}
+
+
+.buttons {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+button {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+
+
+/* Dashboard components & properties
+    Dash components =
+    [#dashboard] main container for dashboard overview,
+    [.dashcontent] dashboard specific heading and info elements,
+    [.dashcontainer] dashboard content container [js interactivity]*/
+#dashboard {
+
+    height: 10vh;
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.dashcontent {
+    color: #fff;
+    display: none;
+    padding: 50px;
+    text-align: center;
+
+    margin-bottom: 10px;
+  }
+
+
+
+.dashlinks {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    float: left;
+  }
+  .dashlinks:hover {
+    background-color: #777;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header {
+    display: flex;
+    background: #777;
+    height: 100vh;
+
+
+}
+.container {
+    background-color: aliceblue;
+
+    height: 300px;
+    margin: auto;
+    text-align: center;
+}
+.login-container {
+    margin: 10px;
+}
+.login-container button {
+    height: 50px;
+    width: 75px;
+    margin-top: 10px;
+    background-color: #777;
+    color: #fff;
+    text-decoration: underline;
+
+}
+
+#main {
+    background-color: dodgerblue;
+    height: 100vh;
+}
+
+.greeting-container {
+    margin: 10px;
+}
+
+.dashcontent {
+    height: 80vh;
+    background-color: red;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.box {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+
+    border: 5px solid blue;
+} */
