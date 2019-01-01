@@ -4,153 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>App Dashboard Js</title>
+    <title>DashJS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-
 </head>
 <body>
-    <!-- <header>
-        <div class="container">
-            <h1>Welcome To Dash Manage</h1>
-            <h2>Interactive Dashboard</h2>
-            <h2 id="username"></h2>
-            <br>
-            <p>Please input your username to begin the application</p>
-            <div class="login-container">
-                <form action="">
-                    <input id="usernameInfo" type="text">
-<br>
-                    <button id="submitBtn" type="submit">Submit</button>
+    <div class="container50">
+        <header>
+            <h1>Welcome to DashboardJS</h1>
+            <p>Interactive & realtime data for current & upcomming projects</p>
+
+            <nav>
+                    <h2>Quicklinks</h2>
+                <div class="flex flex-nav">
+                    <div class="navbox">
+                        <a href="#personal">Personal Dashboard</a>
+        
+                    </div>
+                    <div class="navbox">
+                        <a href="#statistics">Statistics View</a>
+                    </div>
+                    <div class="navbox">
+                        <a href="#createdash">Create Dashboard</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+      
+    <!-- welcome login menu |
+        Users choose from default view = login form > login
+        Selected view = login form > register-form-->
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form">
+                    <input type="text" placeholder="user name"><br>
+                    <input type="text" placeholder="password"><br>
+                    <input type="text" placeholder="email id"><br>
+                    <button>Create</button>
+                    <p class="message">Already Registered? 
+                        <a href="#">Login</a>
+                    </p>
                 </form>
+            
+
+           
+                <form class="login-form">
+                    <input type="text" placeholder="user name"><br>
+                    <input type="text" placeholder="password"><br>
+                    <button>Login</button>
+                    <p class="message">Not Registered? 
+                            <a href="#">Register</a>
+                        </p>
+                </form>
+<br>
+             
+            
+            </div><!--container-form ends here-->
+            <br>
+            
+
+        </div><!--container50 ends here-->
+    </div>
+  
+
+
+
+  
+
+    <!-- Dashboard components & sections -->
+    <div class="dashboard">
+    <!-- dashboard buttons -->
+        <button class="dashlinks" onclick="viewDash('firstDash', this, 'green')">Proj</button>
+        <button class="dashlinks" onclick="viewDash('secondDash', this, 'red')">Apps</button>
+        <button class="dashlinks" onclick="viewDash('thirdDash', this, 'blue')">Res</button>
+    <!-- dashboard content
+         [hidden until event is triggered] -->
+         <div id="firstDash" class="dashcontent">
+             <h2>Projects Overview</h2>
+             <p>Retrieve, analyze and monitor requested, upcoming and in progress 
+                 projects, assignments and workloads.
+             </p>
+         </div>
+    <!-- dashboard content
+         [hidden until event is triggered] -->
+         <div id="secondDash" class="dashcontent">
+                <h2>Apps & Data</h2>
+                <p>Monitor, debugg, analyze and append data, requests and issues via the dash panel live
+                    feed viewer.
+                </p>
             </div>
-
-        </div>  div .container ends here-->
-
-    </header>
-
-    <section id="main" class="container">
-        <div class="greeting-container container">
-          <h1>Welcome To CDH Dashboard Management System</h1>
-          <br>
-          <button id="loginBtn" onclick = getUsername()>Login</button>
-
-          <h2 id="username"></h2>
-        </div>
-
-                <button class="dashlinks buttons" onclick="openDash('firstDash', this, 'burlywood')">Projects</button>
-                <button class="dashlinks buttons" onclick="openDash('secondDash', this, 'purple')">Development</button>
-                <button class="dashlinks buttons" onclick="openDash('thirdDash', this, 'green')">Applications</button>
-                <button class="dashlinks buttons" onclick="openDash('forthDash', this, 'aqua')">Resources</button>
-
-
-
-
-
-            <div id ="firstDash" class="dashcontent">
-                <h2>Projects Overview</h2>
-                <p>Retrieve, analyze, record and append data, deadline information, and
-                    upcoming project specifications and revisions.</p>
-                    <br>
-
-                <div class="dashcontainer">
-                    <h3>Upcoming Revisions:</h3>
-                    <ul>
-                        <li>Dashboard JS interactions</li>
-                        <li>Portfolio Mobile footer</li>
-                        <li>CRUD medical app [diabetes]</li>
-                    </ul>
-                    <br>
-                    <h3>Monthly Updates:</h3>
-                    <ul>
-                        <li>Create Web Dev & Junior Dev Cover letters</li>
-                        <li>Portfolio minifyCSS</li>
-                        <li>Produce extra personal content for portfolio</li>
-                    </ul>
-                </div><!-- dashcontainer ends here-->
-            </div>
-
-            <div id ="secondDash" class="dashcontent">
-                    <h2>Development Overview</h2>
-                    <p>Retrieve, analyze, record and append data, deadline information, and
-                        upcoming project specifications and revisions.</p>
-                        <br>
-
-                    <div class="dashcontainer">
-                        <h3>Design Review:</h3>
-                        <ul>
-                            <li>Dashboard JS interactions</li>
-                            <li>Portfolio Mobile footer</li>
-                            <li>CRUD medical app [diabetes]</li>
-                        </ul>
-                        <br>
-                        <h3>Development [In-Progress]:</h3>
-                        <ul>
-                            <li>Create Web Dev & Junior Dev Cover letters</li>
-                            <li>Portfolio minifyCSS</li>
-                            <li>Produce extra personal content for portfolio</li>
-                        </ul>
-                    </div><!-- dashcontainer ends here-->
+    <!-- dashboard content
+         [hidden until event is triggered] -->
+            <div id="thirdDash" class="dashcontent">
+                    <h2>Resources</h2>
+                    <p>Add, create and link your most widely used online resources and digital content.
+                    </p>
                 </div>
 
-                <div id ="thirdDash" class="dashcontent">
-                        <h2>Applications & Analysis</h2>
-                        <p>Convert Adobe XD designs into working SPA or app.js files</p><br>
-                        <p>Create mock-up database for Diabetes Application</p><br>
-                        <p>Create UI for mobile and Smart-Watch dimensions</p><br>
-
-                        <div class="dashcontainer">
-                            <h3>Design Review:</h3>
-                            <ul>
-                                <li>Dashboard JS interactions</li>
-                                <li>Portfolio Mobile footer</li>
-                                <li>CRUD medical app [diabetes]</li>
-                            </ul>
-                            <br>
-                            <h3>Development [In-Progress]:</h3>
-                            <ul>
-                                <li>Create Web Dev & Junior Dev Cover letters</li>
-                                <li>Portfolio minifyCSS</li>
-                                <li>Produce extra personal content for portfolio</li>
-                            </ul>
-                        </div><!-- dashcontainer ends here-->
-                    </div>
-
-                    <div id ="forthDash" class="dashcontent">
-                            <h2>Development Overview</h2>
-                            <p>Retrieve, analyze, record and append data, deadline information, and
-                                upcoming project specifications and revisions.</p>
-                                <br>
-
-                            <div class="dashcontainer">
-                                <h3>Design Review:</h3>
-                                <ul>
-                                    <li>Dashboard JS interactions</li>
-                                    <li>Portfolio Mobile footer</li>
-                                    <li>CRUD medical app [diabetes]</li>
-                                </ul>
-                                <br>
-                                <h3>Development [In-Progress]:</h3>
-                                <ul>
-                                    <li>Create Web Dev & Junior Dev Cover letters</li>
-                                    <li>Portfolio minifyCSS</li>
-                                    <li>Produce extra personal content for portfolio</li>
-                                </ul>
-                            </div><!-- dashcontainer ends here-->
-                        </div>
-        </div><!-- div #dashboard ends here-->
-
-        </div> <!-- [parent = section #main] div .container ends here-->
-
-
-   </section>
-<!-- <br>
-    <footer class="container">
-        <div class="footer-container container">
-            <h3>Page Created By C D Harris</h3>
-
+        </div><!-- dashboard ends here!-->
+    <div class="container100">
+        <section id="statistics">
+            <h2 style="text-align: center">Dashboard Panels</h2>
+        <div class="flex">
+            <div class="box">
+                <h3>Upcoming Projects</h3>
+                <p><b>Go To Project:</b></p>
+                <a href="" class="project-links">DashJS</a>
+                <a href="" class="project-links">MedicalMonitor</a>
+                <a href="" class="project-links">TemplatesFolder</a>
+            </div>
+            <div class="box">
+                <h3>Databases In-Use:</h3>
+                <p>DataKey = [red = Inactive], [orange = standyby], [green = active]</p>
+            </div>
+            <div class="box">
+                <h3>Live Feeds</h3>
+                <p>Add More Feeds Now!</p>
+                <button>Add Feeds</button>
+                <button>View More</button>
+            </div>
         </div>
-    </footer> -->
+        
+        <div class="container-half"></div>
+        <br>
+        <div class="container-half"></div>
 
+      
+        </section>
+
+    </div>
+
+    <div class="container100">
+        <section id="personal"> 
+            <h2>Personal Dashboard</h2>
+            <p>Select A dashboard component to view the content</p>
+        </section>
+
+        <div class="dashboard container-half">
+            <main>
+                <h2>Dashboard Components</h2>
+                <button onclick="viewDash('elemnt', this, 'color')">Projects</button>
+                <button onclick="viewDash('elemnt', this, 'color')">Applications</button>
+                <button onclick="viewDash('elemnt', this, 'color')">Resources</button>
+            </main>
+            
+        </div><!-- dashboard ends here-->
+        <div class="dashcontent">
+            <h3>Projects</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, quis.</p>
+
+                
+            </div>
+            <div class="dashcontent">
+                    <h3>Applications</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,</p> 
+
+                
+                </div>
+                <div class="dashbcontent">
+                        <h3>Resources</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,</p>
+
+                
+                    </div>
+    </div>
+
+    <div class="container">
+            <section id="createdash">
+                <h2>Create Dashboard</h2>
+                <p>Add components or create a new dashboard</p>
+           
+            </section>
+        </div>
+
+    <div class="container-half">
+        <footer>
+            <h4>DashJS Created By <br>
+            CDHarris</h4>
+        </footer>
+    </div>
+    <!-- external scripts -->
+    <script src="app.js"></script>
+
+    <!-- external script libaries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "show");
+        });
+    </script>
 </body>
 </html>

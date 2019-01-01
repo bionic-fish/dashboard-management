@@ -2,99 +2,147 @@
     margin: 0;
     padding: 0;
 }
-html, body {
-    height: 100%;
+body {
+    box-sizing: border-box;
 }
-/* Global Containers and layouts */
-.container {
-    height: 20vh;
-    padding-bottom: 0;
+/* global layout containers  */
+.container100 {
+    height: 100vh;
+    border: 2px solid;
+    margin: 10px;
 }
-
-/* Landing page section
-   components =
-    [div .greeting-container],
-    [div .container],
-    [button #loginBtn],
-    [p #username]
-*/
-.greeting-container {
-  height: 100vh;
-  width: 100%;
-  background-color:#777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container50 {
+    height: 50vh;
+    border: 2px solid;
+    margin: 10px;
+    background-color: darkcyan;
+    text-align: center;
+    color: #fff;
 }
-#loginBtn {
-  background-color: green;
-  border: 2px solid #000;
-  border-radius: 10px;
-  font-size: 25px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
-
-}
-#loginBtn:hover {
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 10px;
-  font-size: 25px;
-  color: green;
-  font-weight: bold;
-
-}
-
-#username {
-  padding-right: 10px;
-  font-size: 40px;
-}
-
-
-/* Dashboard section colors */
-#firstDash {background-color: burlywood;}
-#secondDash {background-color: purple;}
-#thirdDash {background-color: green;}
-#forthDash {background-color: aqua;}
-
-
-.buttons {
-
-    display: flex;
-    flex-wrap: wrap;
-}
-button {
-    height: 150px;
-    width: 150px;
+.container10 {
+    height: 10vh;
+    border: 2px solid;
     margin: auto;
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 
+}
+.grid {
+    display: grid;
 
-
-/* Dashboard components & properties
-    Dash components =
-    [#dashboard] main container for dashboard overview,
-    [.dashcontent] dashboard specific heading and info elements,
-    [.dashcontainer] dashboard content container [js interactivity]*/
-#dashboard {
-
-    height: 10vh;
-    width: 100%;
-    padding-bottom: 0;
-    text-align: center;
 }
 
-.dashcontent {
-    color: #fff;
-    display: none;
-    padding: 50px;
+/* banner login */
+.login-page {
+    width: 360px;
+    padding: 30px 0 0;
+    margin: auto;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background:rgba(195, 199, 198, 0.7);
+    width: 300px;
+    /* margin: 0; */
+    padding: 25px;
     text-align: center;
+}
+.form input {
+    font-family: 'Courier New', Courier, monospace;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 
-    margin-bottom: 10px;
-  }
+}
 
+.form button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: darkcyan;
+    width: 100%;
+    border:0;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
 
+.form button:hover, .form button:active {
+    background: #fff;;
+    color: darkcyan;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: darkcyan;
+    margin: 15px;
+    
+}
+.form .register-form {
+    display: none;
+}
+
+/* Top navigation menu properties */
+nav {
+    width: auto;
+    border: 1px solid;
+    padding: 10px;
+}
+.navbox {
+    
+    margin: auto;
+    
+}
+
+.flex-nav a {
+    color: #fff;
+    text-decoration: none;
+  
+    
+
+ 
+}
+.flex-nav a:hover {
+    text-decoration: underline;
+    
+}
+
+/* dashboard properties
+    2 components = 
+    [buttons .dashlinks] 
+    &
+    [div .dashcontent] 
+*/
+
+/* dashboard selector buttons */
+#firstDash {background-color: green;}
+#secondDash {background-color: red;}
+#thirdDash {background-color: blue;}
+
+.dashboard {
+    margin: auto;
+    text-align: center;
+}
+.dashcontent {
+    display: none;
+    height: 30vh;
+    margin: auto;
+    padding: 20px;
+}
 
 .dashlinks {
     background-color: #555;
@@ -104,11 +152,11 @@ button {
     padding: 14px 16px;
     font-size: 17px;
     width: 25%;
-    float: left;
+    
+    align-items: center;
+    justify-content: center;
+    
   }
-  .dashlinks:hover {
-    background-color: #777;
-  }
 
 
 
@@ -121,70 +169,29 @@ button {
 
 
 
+/* Testing layout boxes */
+.box {
+    border:3px solid;
+    /* background-color: lightgreen;  */
+    margin: auto;
+    height: 30vh;
+    width: 30%;
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* header {
-    display: flex;
-    background: #777;
-    height: 100vh;
-
-
+    
 }
-.container {
-    background-color: aliceblue;
 
-    height: 300px;
+footer {
+    
+    background-size: contain;
+    padding-top: 20px;
+    
+}
+
+
+.dashboard-container {
+    height: 12vh;
+    border: 2px solid;
     margin: auto;
     text-align: center;
 }
-.login-container {
-    margin: 10px;
-}
-.login-container button {
-    height: 50px;
-    width: 75px;
-    margin-top: 10px;
-    background-color: #777;
-    color: #fff;
-    text-decoration: underline;
-
-}
-
-#main {
-    background-color: dodgerblue;
-    height: 100vh;
-}
-
-.greeting-container {
-    margin: 10px;
-}
-
-.dashcontent {
-    height: 80vh;
-    background-color: red;
-}
-
-.flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.box {
-    margin: auto;
-    height: 100px;
-    width: 100px;
-
-    border: 5px solid blue;
-} */
