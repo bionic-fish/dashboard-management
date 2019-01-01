@@ -260,3 +260,45 @@ footer {
     margin: auto;
     text-align: center;
 }
+
+/* media queries for mobile
+    max-width = 500px */
+@media screen and (max-width: 700px) {
+    .container100, .container50, .container10, .dashboard {
+        display: block;
+
+    }
+    .login-page {
+        
+        text-align: center;
+        margin: auto;
+    }
+    .form {
+        max-width: 350px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background:rgba(195, 199, 198, 0.7);
+        
+        margin: auto;
+        
+        text-align: center;
+    }
+    header {
+        display: none;
+    }
+    .flex {
+        display: block;
+        width: 100%;
+    }
+    .box {
+        width: 90%;
+        max-height: 250px;
+        height: auto;
+        margin: auto;
+    }
+    /* .box {
+        display: inline-block;
+    } */
+
+}
