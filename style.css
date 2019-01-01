@@ -266,7 +266,11 @@ footer {
 @media screen and (max-width: 700px) {
     .container100, .container50, .container10, .dashboard {
         display: block;
-
+        height: fit-content;
+        
+    }
+    .container50 {
+        
     }
     .login-page {
         
@@ -275,9 +279,9 @@ footer {
     }
     .form {
         max-width: 350px;
-        position: absolute;
+        /* position: absolute; */
         top: 0;
-        z-index: 1;
+        /* z-index: 1; */
         background:rgba(195, 199, 198, 0.7);
         
         margin: auto;
@@ -294,7 +298,8 @@ footer {
     .box {
         width: 90%;
         max-height: 250px;
-        height: auto;
+        height: fit-content;
+        /* height: auto; */
         margin: auto;
     }
     /* .box {
