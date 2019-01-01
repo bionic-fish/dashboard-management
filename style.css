@@ -177,6 +177,10 @@ nav {
     height: 30vh;
     width: 30%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
 
     
 }
