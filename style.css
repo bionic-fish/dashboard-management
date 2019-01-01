@@ -1,9 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     box-sizing: border-box;
+    
 }
 /* global layout containers  */
 .container100 {
@@ -21,13 +23,17 @@ body {
 }
 .container10 {
     height: 10vh;
+    background-color: darkcyan;
     border: 2px solid;
-    margin: auto;
+    color: #fff;
+    margin: 10px;
+    text-align: center;
 }
 .flex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    /* margin: auto; */
 
 }
 .grid {
@@ -70,6 +76,7 @@ body {
     background: darkcyan;
     width: 100%;
     border:0;
+    border-radius: 10px;
     padding: 15px;
     color: #fff;
     font-size: 14px;
@@ -129,9 +136,9 @@ nav {
 */
 
 /* dashboard selector buttons */
-#firstDash {background-color: green;}
-#secondDash {background-color: red;}
-#thirdDash {background-color: blue;}
+#firstDash {background-color: darkgrey;}
+#secondDash {background-color: darkcyan;}
+#thirdDash {background-color: darkgray;}
 
 .dashboard {
     margin: auto;
@@ -140,12 +147,14 @@ nav {
 .dashcontent {
     display: none;
     height: 30vh;
-    margin: auto;
+    margin: 10px;
     padding: 20px;
+    color: #fff;
 }
 
 .dashlinks {
-    background-color: #555;
+    background-color: darkcyan;
+    border-radius: 10px;
     color: #fff;
     border: none;
     outline: none;
@@ -159,9 +168,73 @@ nav {
   }
 
 
+/* dash panels content */
+/* panel display */
+.box {
+    border:3px solid;
+    background: #fff;
+    color: darkcyan;
+    margin: auto;
+    height: 30vh;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 
+    transition-property: all 2s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+.box:hover {
+    transform: translate(10px, -10px);
+    
+    
+}
+.box-content li {
+    margin: 10px;
+    list-style-type: none;
+    
+}
+/* user activity monitor */
+span {text-decoration: underline; font-weight: bold;}
+.dev-active {color: green;}
+.dev-standby {color: orange;}
+.dev-inactive {color: red;}
 
+/* dash panels SVG charts */
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 70%;
+    max-height: 250px;
+  }
+  .circle {
+    stroke: darkcyan;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
 
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+
+/* dashboard panels list item properties */
 
 
 
@@ -170,25 +243,13 @@ nav {
 
 
 /* Testing layout boxes */
-.box {
-    border:3px solid;
-    /* background-color: lightgreen;  */
-    margin: auto;
-    height: 30vh;
-    width: 30%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 
-    display: flex;
-
-    
-}
 
 footer {
     
     background-size: contain;
     padding-top: 20px;
+    margin: auto;
     
 }
 
