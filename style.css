@@ -5,6 +5,7 @@
 }
 body {
     box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
     
 }
 /* global layout containers  */
@@ -20,6 +21,15 @@ body {
     background-color: darkcyan;
     text-align: center;
     color: #fff;
+    display: flex;
+}
+.container20 {
+    height: 20vh;
+    background-color: darkcyan;
+    border: 2px solid;
+    color: #fff;
+    margin: 10px;
+    text-align: center;
 }
 .container10 {
     height: 10vh;
@@ -29,11 +39,15 @@ body {
     margin: 10px;
     text-align: center;
 }
+.placement {
+    margin: auto;
+    padding: 15px;
+}
 .flex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* margin: auto; */
+    margin: auto;
 
 }
 .grid {
@@ -68,6 +82,9 @@ body {
     font-size: 14px;
 
 }
+.form input[type=text] {
+    text-align: center;
+} 
 
 .form button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -106,26 +123,32 @@ body {
 /* Top navigation menu properties */
 nav {
     width: auto;
-    border: 1px solid;
+    border-bottom: 1px solid;
     padding: 10px;
 }
 .navbox {
-    
+    margin: auto;
+    height: 75px;
+    width: 80px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+}
+.flex-nav a {
+    color: darkcyan;
+    text-decoration: none;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Inconsolata', monospace;
     margin: auto;
     
-}
 
-.flex-nav a {
-    color: #fff;
-    text-decoration: none;
-  
     
-
- 
+    
 }
 .flex-nav a:hover {
     text-decoration: underline;
-    
 }
 
 /* dashboard properties
@@ -164,9 +187,7 @@ nav {
     
     align-items: center;
     justify-content: center;
-    
   }
-
 
 /* dash panels content */
 /* panel display */
@@ -188,12 +209,12 @@ nav {
 }
 .box:hover {
     transform: translate(10px, -10px);
-    
-    
 }
 .box-content li {
     margin: 10px;
     list-style-type: none;
+}
+.box-content {
     
 }
 /* user activity monitor */
@@ -233,63 +254,39 @@ span {text-decoration: underline; font-weight: bold;}
       stroke-dasharray: 0 100;
     }
   }
-
-/* dashboard panels list item properties */
-
-
-
-
-
-
-
-/* Testing layout boxes */
-
-
 footer {
-    
     background-size: contain;
     padding-top: 20px;
     margin: auto;
-    
-}
-
-
-.dashboard-container {
-    height: 12vh;
-    border: 2px solid;
-    margin: auto;
-    text-align: center;
 }
 
 /* media queries for mobile
     max-width = 500px */
 @media screen and (max-width: 700px) {
+    .navbox {
+        display: inline-block;
+        margin: auto;
+    }
+    .navbox a {
+        margin: auto;
+    }
     .container100, .container50, .container10, .dashboard {
         display: block;
         height: fit-content;
-        
     }
     .container50 {
-        
+        margin: auto;
     }
     .login-page {
-        
         text-align: center;
         margin: auto;
     }
     .form {
         max-width: 350px;
-        /* position: absolute; */
         top: 0;
-        /* z-index: 1; */
         background:rgba(195, 199, 198, 0.7);
-        
         margin: auto;
-        
         text-align: center;
-    }
-    header {
-        display: none;
     }
     .flex {
         display: block;
@@ -299,11 +296,7 @@ footer {
         width: 90%;
         max-height: 250px;
         height: fit-content;
-        /* height: auto; */
         margin: auto;
     }
-    /* .box {
-        display: inline-block;
-    } */
 
 }

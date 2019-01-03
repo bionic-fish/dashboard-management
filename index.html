@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DashJS</title>
     <link rel="stylesheet" href="style.css">
+    <!-- external style libaries -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata" rel="stylesheet">    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 <body>
     <div class="container50">
-        <header>
+        <header class="placement">
             <h1>Welcome to DashboardJS</h1>
             <p>Interactive & realtime data for current & upcomming projects</p>
 
@@ -24,11 +28,12 @@
                         <a href="#panels">Dashboard Panels</a>
                     </div>
                     <div class="navbox">
-                        <a href="#createdash">Create Dashboard</a>
+                        <a href="#services">Services & Features</a>
                     </div>
                 </div>
             </nav>
         </header>
+    
       
     <!-- welcome login menu |
         Users choose from default view = login form > login
@@ -41,8 +46,7 @@
                     <input type="text" placeholder="email id"><br>
                     <button>Create</button>
                     <p class="message">Already Registered? 
-                        <a href="#">Login</a>
-                    </p>
+                     <a href="#">Login</a></p>
                 </form>
             
 
@@ -68,7 +72,7 @@
   
 
     <!-- Dashboard components & sections -->
-    <div class="dashboard">
+    <div class="dashboard" id="personal">
     <!-- dashboard buttons -->
         <button class="dashlinks" onclick="viewDash('firstDash', this, 'darkgrey')">Proj</button>
         <button class="dashlinks" onclick="viewDash('secondDash', this, 'darkcyan')">Apps</button>
@@ -101,8 +105,8 @@
         <!-- Dashboard components & sections ends here! -->
 
         <!-- Dashboard Panel -->
-    <div class="container50">
-        <section id="panels">
+<div class="container50">
+        <section id="panels" class="placement">
             <h2 style="text-align: center">Dashboard Panels</h2>
         <div class="flex">
      
@@ -176,36 +180,47 @@
                     </div><!--box-content ends here-->
                 </div><!--flex-content ends here-->
         </div>
-        
-    
+    </section>
+</div><!-- dashboard ends here-->
 
-      
-        </section>
-
-   
-
-
-            
-        </div><!-- dashboard ends here-->
-        <!-- <div class="container50">
-            <section id="createdash">
-                <h2>Create Dashboard</h2>
-                <p>Add components or create a new dashboard</p>
-           
-            </section>
+<div class="container50">
+    <section id="services" class="placement">
+    <h2>Dashboard Services</h2>
+    <br>
+    <p>DashboardJS offers a wide ranges of services needed to operate in the agile workspace
+        for technological development teams as well as offering real-time monitorization of 
+        projects.
+    </p>
+    <br>
+<div class="flex">
+    <div class="box">
+        <div class="box-content">
+        <h3>Realtime Monitoring</h3>
+        <img src="img/service1-features.png" alt="monitor">
         </div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="box-content">
+        <h3>Team Colaboration & Management</h3>
+        <img src="img/service2-features.png" alt="support">
+        </div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="box-content">
+        <h3>Database & Server Statistics</h3>
+        <img src="img/service3-features.png" alt="desktop">
+        </div>
+    </div>
+</div>
+</section><!-- section [id = services] .placement ends here-->
 
-       
-          
-    </div> -->
+</div>
 
-
-
-    <div class="container10">
-        <footer>
-            <h4>DashJS Created By <br>
-            CDHarris</h4>
-<br>
+<div class="container20">
+        <nav>
+                <h2>More Features</h2>
             <div class="flex flex-nav">
                 <div class="navbox">
                     <a href="#personal">Personal Dashboard</a>
@@ -215,10 +230,20 @@
                     <a href="#panels">Dashboard Panels</a>
                 </div>
                 <div class="navbox">
-                    <a href="#createdash">Create Dashboard</a>
+                    <a href="#services">Services & Features</a>
                 </div>
             </div>
         </nav>
+    </header>  
+      
+</div>
+
+<div class="container10">
+        <footer>
+            <h4>DashJS Created By <br>
+            CDHarris</h4>
+<br>
+      
         </footer>
     </div>
     <!-- external scripts -->
