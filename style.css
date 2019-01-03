@@ -214,9 +214,7 @@ nav {
     margin: 10px;
     list-style-type: none;
 }
-.box-content {
-    
-}
+
 /* user activity monitor */
 span {text-decoration: underline; font-weight: bold;}
 .dev-active {color: green;}
